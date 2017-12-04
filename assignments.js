@@ -2,7 +2,7 @@ var d = document.getElementById('demo');
 d.style.position = "absolute";
 d.style.left = 850+'px';
 d.style.top = 400+'px';
-
+var accesstoken = "12~2ctSXKXs3Ye70uhc7MllKuO9t6RmO8iq02mSlwRxmnR95rLk5QSrFsHwxtqyDpab"
 var images = [
        "https://i.pinimg.com/originals/db/ff/6a/dbff6a0e91161f910236c8b9e57e6c47.jpg",
        "https://img.purch.com/h/1000/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzAyMC8wMjIvb3JpZ2luYWwvNC1hdXR1bW4tY2l0eS1wYXJrLmpwZw==",
@@ -23,7 +23,7 @@ document.body.style.backgroundSize = screen.width + "px " + screen.height + "px"
 document.getElementById("demo").style.backgroundColor = "black";
 
 var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open( "GET", "https://canvas.instructure.com//api/v1/courses?access_token=12~2ctSXKXs3Ye70uhc7MllKuO9t6RmO8iq02mSlwRxmnR95rLk5QSrFsHwxtqyDpab", false ); // false for synchronous request
+  xmlHttp.open( "GET", "https://canvas.instructure.com//api/v1/courses?access_token=" + accesstoken, false ); // false for synchronous request
   xmlHttp.send()
 
   console.log(xmlHttp.responseText);
@@ -38,7 +38,7 @@ var xmlHttp = new XMLHttpRequest();
 
 });
 
-xmlHttp.open( "GET", "https://canvas.instructure.com/api/v1/courses/120000001240739/assignments?per_page=100&access_token=12~2ctSXKXs3Ye70uhc7MllKuO9t6RmO8iq02mSlwRxmnR95rLk5QSrFsHwxtqyDpab&bucket=future", false ); // false for synchronous request
+xmlHttp.open( "GET", "https://canvas.instructure.com/api/v1/courses/120000001240739/assignments?per_page=100&access_token=" + accesstoken + "&bucket=future", false ); // false for synchronous request
 xmlHttp.send()
 
 console.log(xmlHttp.responseText);
