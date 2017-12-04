@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Canvas Assignments",
+  "description": "This extension allows the user to view assignments on canvas",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "canvas.png"
+  },
+
+  "chrome_url_overrides": {
+   "newtab": "canvas.html"
+},
+  "background": {
+    "scripts": ["pop.js"],
+    "persistent": false
+},
+  "permissions": [
+    "https://canvas.instructure.com/*"
+  ]
+}
